@@ -24,11 +24,16 @@ model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['ac
 
 model.fit(train_images, train_labels, epochs=5, batch_size=128)
 
+print(model.summary())
+
 train_loss, train_acc = model.evaluate(train_images, train_labels)
 test_loss, test_acc = model.evaluate(test_images, test_labels)
 
 print('train_acc : ', train_acc)
 print('test_acc : ', test_acc)
 
-plot_model(model, to_file='model.png', show_shapes=True, show_layer_names=True)
+plot_model(model, to_file='MNIST_model_vertical.png', show_shapes=True, show_layer_names=True)
+
+plot_model(model, to_file='MNIST_model_horizontal.png', show_shapes=True, show_layer_names=True, rankdir='LR')
+
 model.save('init_model.h5')
