@@ -30,6 +30,5 @@ test_loss, test_acc = model.evaluate(test_images, test_labels)
 print('train_acc : ', train_acc)
 print('test_acc : ', test_acc)
 
-plot_model(model, to_file='model.png')
-
+plot_model(model, to_file='model.png', show_shapes=True, show_layer_names=True)
 model.save('init_model.h5')
