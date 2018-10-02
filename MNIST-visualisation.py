@@ -4,7 +4,7 @@ from time import sleep
 from keras.datasets import mnist
 from keras.models import load_model
 
-model = load_model('init_model.h5')
+model = load_model('MNIST_model.h5')
 
 print(model.summary())
 

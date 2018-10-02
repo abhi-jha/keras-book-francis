@@ -36,4 +36,4 @@ plot_model(model, to_file='MNIST_model_vertical.png', show_shapes=True, show_lay
 
 plot_model(model, to_file='MNIST_model_horizontal.png', show_shapes=True, show_layer_names=True, rankdir='LR')
 
-model.save('init_model.h5')
+model.save('MNIST_model.h5')
